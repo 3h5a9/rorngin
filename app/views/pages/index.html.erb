@@ -1,0 +1,36 @@
+<div class="jumbotron bg-warning text-center mb-0 h-100 rounded-0 p-0">
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col-md-6 bg-danger h-100">
+        <div class="h-100 d-flex flex-column justify-content-center">
+          <h1 class="display-1 font-weight-bolder">Welcome</h1>
+          <h3>to</h3>
+          <h1 class="display-1 font-weight-bolder text-warning">rormaster</h1>
+           <p>rormaster is a rails 6 starter template.</p>
+        </div>
+      </div>
+      <div class="col-md-6 bg-white h-100">
+        <div class="h-100 d-flex flex-column justify-content-center"
+          <p>Included Resources</p>
+          <div class="resources">
+            <span class="badge badge-danger rounded-0 font-weight-bold p-2 mb-1">Bootstrap-4</span>
+            <span class="badge badge-danger rounded-0 font-weight-bold p-2">jquery</span>
+            <span class="badge badge-danger rounded-0 font-weight-bold p-2">popperjs</span>
+            <span class="badge badge-danger rounded-0 font-weight-bold p-2">font-awesome-5</span>
+            <span class="badge badge-danger rounded-0 font-weight-bold p-2">Devise</span>
+          </div>
+
+          <div class="button_container mt-5">
+            <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger rounded-0' %>
+              <%= link_to "Dashboard", admin_dashboard_path, class: 'btn btn-outline-primary rounded-0' %>
+            <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-outline-danger rounded-0' %>
+              <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-outline-danger rounded-0' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
